@@ -127,7 +127,7 @@ public class DubboInterceptor implements InstanceMethodsAroundInterceptor {
         operationName.append(requestURL.getPath());
         operationName.append("." + invocation.getMethodName() + "(");
         for (Class<?> classes : invocation.getParameterTypes()) {
-            operationName.append(classes.getSimpleName() + ",");
+            operationName.append(classes.getSimpleName() + ":");
         }
 
         if (invocation.getParameterTypes().length > 0) {
